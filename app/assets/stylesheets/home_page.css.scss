@@ -1,0 +1,125 @@
+// Place all the styles related to the home_page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Aaron Sullivan alias Aaronik alias Aaroneous 2013 */
+
+html {
+	overflow:hidden;
+}
+
+body{
+	background:black;
+}
+
+/*************************/
+.stagers{
+	background:tan;
+	width:50%;
+}
+.new_table{
+	display:block;
+
+	p {
+		display:inline;
+		background:green;
+	}
+}
+#sun{
+	z-index:2; /* for layer ordering | the higher the index, the closer the layer to your face. */ 
+	margin-top:-210px; /* Lest the image's top left corner be centered */
+	margin-left:-180px;
+	transition:all 0.8s
+}
+.corona_divs{				/* The divs must be so I can have both orbit and scale */
+	z-index:1;
+	margin-top:-130px;
+	margin-left:-100px;
+	transition:all 0.8s;
+}
+.coronas{
+	-webkit-transition:all 1s;
+
+	&:hover {
+		-webkit-transform:scale(1.2,1.2);
+	}
+}
+
+/***** addable classes *******/
+.hidden{					/* The coronas will have this class added to them when they are clicked on */
+	opacity:0.4;
+}
+.centered{				/* All b/c the sun won't move aside damnit thinks it's the center of the solar system. */
+	position:absolute;
+	left:50%;
+	top:55%;
+}
+.moved_aside{
+	position:absolute;
+	left:70%;
+}
+
+#corona1_div{ -webkit-animation:orbit1 70s linear infinite; }
+#corona2_div{ -webkit-animation:orbit2 70s linear infinite; }
+#corona3_div{ -webkit-animation:orbit3 70s linear infinite; }
+#corona4_div{ -webkit-animation:orbit4 70s linear infinite; }
+#corona5_div{ -webkit-animation:orbit5 70s linear infinite; }
+#corona6_div{ -webkit-animation:orbit6 70s linear infinite; }
+
+
+/*************************/
+#key-main_wrapper{
+	background:tan;
+	border-radius:20%;
+	position:absolute;
+	top:30%;
+	right:10px;
+	padding:15px;
+}
+.key_line{
+	padding:5px;
+
+	p {
+		display:inline;
+		border-radius:100%;
+		padding:5px;
+		margin:5px;
+	}
+}
+#key_line_music p { background:yellow; }
+#key_line_blue_business p { background:blue; }
+#key_line_grn_philosophy p { background:green; }
+#key_line_purp_program p { background:purple; }
+#key_line_red_web p { background:red; }
+#key_line_teal_me p { background:teal; }
+/*************************/
+
+
+
+/******************** KEYFRAME ANIMATIONS *************************/
+$CORONA_DISTANCE: 230px;
+
+@-webkit-keyframes orbit1 {
+	from { -webkit-transform: rotate(0deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(360deg) translateX($CORONA_DISTANCE); }
+}
+@-webkit-keyframes orbit2 {
+	from { -webkit-transform: rotate(60deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(420deg) translateX($CORONA_DISTANCE); }
+}
+@-webkit-keyframes orbit3 {
+	from { -webkit-transform: rotate(120deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(480deg) translateX($CORONA_DISTANCE); }
+}
+@-webkit-keyframes orbit4 {
+	from { -webkit-transform: rotate(180deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(540deg) translateX($CORONA_DISTANCE); }
+}
+@-webkit-keyframes orbit5 {
+	from { -webkit-transform: rotate(240deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(600deg) translateX($CORONA_DISTANCE); }
+}
+@-webkit-keyframes orbit6 {
+	from { -webkit-transform: rotate(300deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(660deg) translateX($CORONA_DISTANCE); }
+}
