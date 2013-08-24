@@ -3,10 +3,13 @@ class HomePageController < ApplicationController
 
 		@client_ip = request.remote_ip
 
-		Info.create(ip: @client_ip)
-		#@remote_ip = request.env["HTTP_X_FORWARDED_FOR"]
-		#@my_ip = request.env["HTTP_X_FORWARDED_FOR"] || request.remote_addr
-		#@ip_addr = request.env['REMOTE_ADDR']
+		client = Info.find_by(ip: @client_ip)
+		if client
+			client.visit_count += 1
+			client.save
+		else
+			Info.create(ip: @client_ip, visit_count: 1)
+		end
 
 		render 'home3.html'
 	end
