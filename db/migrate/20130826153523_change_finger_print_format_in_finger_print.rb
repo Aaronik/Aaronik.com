@@ -1,8 +1,8 @@
 class ChangeFingerPrintFormatInFingerPrint < ActiveRecord::Migration
   def up
   connection.execute(%q{
-    alter table tweets
-    alter column number
+    alter table finger_prints
+    alter column finger_print
     type integer using cast(number as integer)
   })
 end
