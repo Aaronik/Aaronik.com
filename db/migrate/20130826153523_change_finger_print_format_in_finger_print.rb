@@ -3,7 +3,7 @@ class ChangeFingerPrintFormatInFingerPrint < ActiveRecord::Migration
   connection.execute(%q{
     alter table finger_prints
     alter column finger_print
-    type integer using cast(number as integer)
+    type integer using cast(finger_print as integer)
   })
 end
 
