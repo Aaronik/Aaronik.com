@@ -8,7 +8,7 @@ def update(finger_print_id, notes)
 	working_user.save
 end
 
-def see(finger_print_id)
+def show(finger_print_id)
 	working_user = FingerPrint.find(finger_print_id)
 	working_user.Ips.all
 end

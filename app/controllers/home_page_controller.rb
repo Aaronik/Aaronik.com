@@ -29,6 +29,10 @@ class HomePageController < ApplicationController
 
 		@fingerprint = params["json_string"]
 		@client_ip = request.remote_ip
+
+		if ! @fingerprint
+			logger.error "Fingerprint not coming in correctly"
+		end
 		
 		user = FingerPrint.where(finger_print: @fingerprint)
 		if user.length == 1
