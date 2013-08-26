@@ -27,21 +27,23 @@ class HomePageController < ApplicationController
 		# Ip(id: integer, ip: string, count: integer, notes: text, created_at: datetime, updated_at: datetime) 
 		# FingerPrint(id: integer, finger_print: text, notes: text, created_at: datetime, updated_at: datetime) 
 
-		@fingerprint = params["json_string"].to_s
-		@client_ip = request.remote_ip.to_s
+		@fingerprint = params["json_string"]
+		@client_ip = request.remote_ip
 		
-		user = FingerPrint.all.select { |print| print.finger_print.match @fingerprint }
+		user = FingerPrint.where(finger_print: @fingerprint)
 		if user.length == 1
 			# scan this user's ips, if matching, count up one.  If no match, add.
 			user = user.first
+
+			# Found the finger print, now work with the ips
 			ip_list = user.Ips.where(ip: @client_ip)
-			if ip_list == 1
+			if ip_list.length == 1
 				ip = ip_list.first
 				ip.count += 1
 				ip.save
-			elsif ip_list == 0
+			elsif ip_list.length == 0
 				user.Ips.create(ip: @client_ip, count: 1)
-			elsif ip_list > 1
+			elsif ip_list.length > 1
 				logger.error "parsed through Fingerprints and found multiple equivalent ips"
 			end
 
