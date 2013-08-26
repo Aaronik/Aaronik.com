@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  finger_print: MyText
+  notes: MyText
+
+two:
+  finger_print: MyText
+  notes: MyText

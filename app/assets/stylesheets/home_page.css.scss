@@ -117,6 +117,7 @@ $KEY_COLOR:#6600CC;
 	right:10px;
 	padding:15px;
 	box-shadow:$KEY_COLOR 0px 0px 5px 5px;
+	transition: all 1s;
 }
 .key_line{
 	padding:5px;
@@ -124,8 +125,8 @@ $KEY_COLOR:#6600CC;
 	p {
 		display:inline;
 		border-radius:100%;
-		padding:5px;
-		margin:5px;
+		padding:10px;
+		margin:10px;
 	}
 }
 #key_line_music p { background:yellow; }

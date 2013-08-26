@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ip: MyString
+  count: 1
+  notes: MyText
+
+two:
+  ip: MyString
+  count: 1
+  notes: MyText
