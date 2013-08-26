@@ -27,8 +27,8 @@ class HomePageController < ApplicationController
 		# Ip(id: integer, ip: string, count: integer, notes: text, created_at: datetime, updated_at: datetime) 
 		# FingerPrint(id: integer, finger_print: text, notes: text, created_at: datetime, updated_at: datetime) 
 
-		@fingerprint = params["json_string"]
-		@client_ip = request.remote_ip
+		@fingerprint = params["json_string"].to_s
+		@client_ip = request.remote_ip.to_s
 		
 		user = FingerPrint.all.select { |print| print.finger_print.match @fingerprint }
 		if user.length == 1
@@ -53,7 +53,5 @@ class HomePageController < ApplicationController
 			new_user = FingerPrint.create(finger_print: @fingerprint)
 			new_user.Ips.create(ip: @client_ip, count: 1)
 		end
-
-
 	end
 end
