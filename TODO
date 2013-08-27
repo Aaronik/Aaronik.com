@@ -1,5 +1,6 @@
 -when you navigate back/forward to page, all stagers are visible,  why?
--Why does it take so much CPU?
+-Why does it take so much CPU? -CSS animations.  based on your GPU
 
--take down tables, remake em right
--recast music
+-recast key, maybe labels on pedals
+-when music is playing, audio tag flies to the right or somewhere for easy stop, then fades away when it's done.
+-put coronas relative to sun to aid in zoom in / zoom out

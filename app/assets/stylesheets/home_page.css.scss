@@ -10,8 +10,9 @@ html {
 
 body{
 	background:black;
-	font-family:Verdana;
-	//font-weight:bold;
+	font-family:Comic Sans MS;
+	font-weight:bold;
+	font-size:large;
 }
 
 /*************************/
@@ -67,7 +68,11 @@ $STAGER_COLOR:teal;
 	z-index:2; /* for layer ordering | the higher the index, the closer the layer to your face. */ 
 	margin-top:-210px; /* Lest the image's top left corner be centered */
 	margin-left:-180px;
-	transition:all 0.8s
+	transition:all 0.8s;
+
+	&:hover {
+		-webkit-transform:scale(1.02,1.02);
+	}
 }
 .corona_divs{				/* The divs must be so I can have both orbit and scale */
 	z-index:1;
@@ -79,7 +84,7 @@ $STAGER_COLOR:teal;
 	-webkit-transition:all 1s;
 
 	&:hover {
-		-webkit-transform:scale(1.2,1.2);
+		-webkit-transform:scale(1.1,1.1);
 	}
 }
 
@@ -113,7 +118,7 @@ $KEY_COLOR:#6600CC;
 	background:$KEY_COLOR;
 	border-radius:20%;
 	position:absolute;
-	top:30%;
+	top:20%;
 	right:10px;
 	padding:15px;
 	box-shadow:$KEY_COLOR 0px 0px 5px 5px;
@@ -121,13 +126,21 @@ $KEY_COLOR:#6600CC;
 }
 .key_line{
 	padding:5px;
+	position:relative;
+	top:0%;
 
-	p {
-		display:inline;
-		border-radius:100%;
-		padding:10px;
-		margin:10px;
+	img {
+		// height:10em; 
+		vertical-align:middle
 	}
+
+	// p {
+	// 	display:inline;
+	// 	border-radius:100%;
+	// 	padding:1px;
+	// 	margin:1px;
+	// 	width:100px;
+	// }
 }
 #key_line_music p { background:yellow; }
 #key_line_blue_business p { background:blue; }
