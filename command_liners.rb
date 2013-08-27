@@ -1,5 +1,7 @@
 def report
+	puts "########################"
 	puts FingerPrint.all.each {|x| puts "#{x.id}. #{x.finger_print} - #{x.notes}"}
+	puts "########################"
 end
 
 def update(finger_print_id, notes)
@@ -14,7 +16,7 @@ def show(finger_print_id)
 end
 
 def whoelse(ip_address)
-	fpid_list = Ip.where(ip: "127.0.0.1").map {|fp| fp.finger_print_id }
+	fpid_list = Ip.where(ip: ip_address).map {|fp| fp.finger_print_id }
 	fpid_list.each do |fpid|
 		fp = FingerPrint.find(fpid)
 		puts "#{fp.id}. #{fp.finger_print} - #{fp.notes}"

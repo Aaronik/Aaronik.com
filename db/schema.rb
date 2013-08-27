@@ -11,30 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130826153523) do
-
-  create_table "finger_prints", force: true do |t|
-    t.integer  "finger_print"
-    t.text     "notes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "infos", force: true do |t|
-    t.string   "ip"
-    t.text     "notes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "visit_count"
-  end
-
-  create_table "ips", force: true do |t|
-    t.string   "ip"
-    t.integer  "count"
-    t.text     "notes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "finger_print_id"
-  end
+ActiveRecord::Schema.define(version: 20130827004353) do
 
 end
