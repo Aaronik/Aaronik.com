@@ -1,7 +1,5 @@
 def report
-	puts "########################"
 	puts FingerPrint.all.each {|x| puts "#{x.id}. #{x.finger_print} - #{x.notes}"}
-	puts "########################"
 end
 
 def update(finger_print_id, notes)
@@ -12,7 +10,7 @@ end
 
 def show(finger_print_id)
 	working_user = FingerPrint.find(finger_print_id)
-	working_user.Ips.all
+	working_user.ips.all
 end
 
 def whoelse(ip_address)

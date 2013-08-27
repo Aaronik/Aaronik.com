@@ -1,3 +1,3 @@
 class Ip < ActiveRecord::Base
-	belongs_to :FingerPrint
+	belongs_to :fingerprint
 end

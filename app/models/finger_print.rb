@@ -1,3 +1,3 @@
 class FingerPrint < ActiveRecord::Base
-	has_many :Ips
+	has_many :ips
 end
