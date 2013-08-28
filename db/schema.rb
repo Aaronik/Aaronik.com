@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130828012114) do
+ActiveRecord::Schema.define(version: 20130828132032) do
 
   create_table "finger_prints", force: true do |t|
     t.integer  "finger_print", limit: 8
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "comp_info"
   end
 
   create_table "ips", force: true do |t|

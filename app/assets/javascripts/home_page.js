@@ -10,7 +10,11 @@ $(document).ready(function(){
 
 	// Fingerprantin
 	var fingerprint = new Fingerprint().get()
-	$.post("/", { json_string:JSON.stringify(fingerprint) });
+	$.post("/finger_print", { json_string:JSON.stringify(fingerprint) });
+
+	// Getting Comp Info
+	var comp_info = navigator.userAgent
+	$.post("/comp_info", { json_string:JSON.stringify(comp_info) });
 	
 	// Click on the coronas
 	$(".coronas").click(function(event){
