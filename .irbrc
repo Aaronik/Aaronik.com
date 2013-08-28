@@ -1,1 +1,1 @@
-load 'bin/command_liners.rb'
+load 'command_liners.rb'

@@ -12,10 +12,15 @@ class HomePageController < ApplicationController
 		# FingerPrint(id: integer, finger_print: integer, notes: text, created_at: datetime, updated_at: datetime)
 
 		@fingerprint = params["json_string"]
-		@client_ip = request.remote_ip
-		@client_location = request.location # Thank you, geocoder
+		logger.error "Fingerprint not coming in correctly" if ! @fingerprint
 
-			logger.error "Fingerprint not coming in correctly" if ! @fingerprint
+		@client_ip = request.remote_ip
+
+		geo_info = request.location # Thank you, geocoder
+		@client_location = "#{geo_info.city} #{geo_info.state}, #{geo_info.country_code}"
+		#{}"city"=>"", "region_code"=>"", "region_name"=>"", "metrocode"=>"", "zipcode"=>"", "latitude"=>"0", "longitude"=>"0", "country_name"=
+
+		logger.error "Fingerprint not coming in correctly" if ! @fingerprint
 		
 		user = FingerPrint.where(finger_print: @fingerprint)
 		if user.length == 1
