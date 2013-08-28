@@ -25,11 +25,7 @@ class HomePageController < ApplicationController
 			else # If no IP in table already, make one
 				user.ips.create(ip: @client_ip, visit_count: 1, location: @client_location)
 			end
-
-		elsif user.length > 1
-			# Figure out what to do if there are multiple objects with same fingerprint.  This shouldn't happen.
-			logger.error "found multiple objects with same fingerprint.  Ridiculous."
-		elsif user.length == 0
+		else
 			# Create new user with this fingerprint, create new ip with this ip.
 			new_user = FingerPrint.create(finger_print: $fingerprint)
 			new_user.ips.create(ip: @client_ip, visit_count: 1, location: @client_location)
