@@ -10,15 +10,16 @@ html {
 
 body{
 	background:black;
-	font-family:"Comic Sans MS";
-	font-weight:bold;
-	font-size:large;
+	
 }
 
 /*************************/
 //$STAGER_COLOR:#DD7700;
-$STAGER_COLOR:teal;
+//$STAGER_COLOR:#0000CD;
+$STAGER_COLOR:#A14F00;
 .stagers{
+	font-family: 'Ariel Bold', cursive;
+	font-size:18px;
 	background:$STAGER_COLOR;
 	text-align:center;
 	width:45%;
@@ -29,11 +30,32 @@ $STAGER_COLOR:teal;
 	a {
 		text-decoration: none;
 	}
+
+	h2 {
+		font-family: 'Londrina Sketch', cursive;
+		font-size:40px;
+		//background:#00688B;
+		//background:#B0E0E6;
+		background:#D7B300;
+		border-radius:10px;
+		border:1px solid black;
+		box-shadow:black 3px 3px 3px 3px;
+	}
+
+	p {
+		border-radius:10px;
+		box-shadow:black 1px 1px 1px 1px;
+		//background:#48D1CC;
+		background:#51B336;
+	}
+
+	audio {
+		vertical-align: middle;
+	}
 }
-#philosophy_div{
+#philosophy{
 	p{
 		border:1px solid black;
-		border-radius:10px;
 		padding:10px;
 	}
 }
@@ -48,6 +70,7 @@ $STAGER_COLOR:teal;
 		text-align:center;
 		background:$BUTTON_COLOR;
 		border-radius:10px;
+		box-shadow: black 1px 1px 1px 1px;
 		color:white;
 		padding:8px;
 		margin:2px;
@@ -103,21 +126,25 @@ top:55%;
 }
 
 /*************************/
-$KEY_COLOR:#6600CC;
+//$KEY_COLOR:#6600CC;
+$KEY_COLOR:black;
 #key-main_wrapper{
+	font-family:"Comic Sans MS";
+	font-weight:bold;
+	font-size:large;
 	background:$KEY_COLOR;
+	color:#BBBBBB;
 	border-radius:20%;
 	position:absolute;
-	top:20%;
+	top:10%;
 	right:10px;
 	padding:15px;
 	box-shadow:$KEY_COLOR 0px 0px 5px 5px;
 	transition: all 1s;
 }
 .key_line{
-	padding:5px;
-	position:relative;
-	top:0%;
+	//padding:5px;
+	padding:20px;
 
 	img {
 		vertical-align:middle

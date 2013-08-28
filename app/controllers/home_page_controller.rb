@@ -17,7 +17,7 @@ class HomePageController < ApplicationController
 		@client_ip = request.remote_ip
 
 		geo_info = request.location # Thank you, geocoder
-		@client_location = "#{geo_info.city} #{geo_info.state}, #{geo_info.country_code}"
+		@client_location = "#{geo_info.city}, #{geo_info.state} #{geo_info.country_code}"
 		#{}"city"=>"", "region_code"=>"", "region_name"=>"", "metrocode"=>"", "zipcode"=>"", "latitude"=>"0", "longitude"=>"0", "country_name"=
 
 		logger.error "Fingerprint not coming in correctly" if ! @fingerprint
