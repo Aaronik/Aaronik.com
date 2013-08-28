@@ -115,6 +115,9 @@ $STAGER_COLOR:#A14F00;
 .hidden{					/* The coronas will have this class added to them when they are clicked on */
 	opacity:0.4;
 }
+.hidden2{
+	opacity:0.09;
+}
 .centered{				/* All b/c the sun won't move aside damnit thinks it's the center of the solar system. */
 position:absolute;
 left:50%;

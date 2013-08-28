@@ -7,7 +7,7 @@ class HomePageController < ApplicationController
 
 	def finger_print
 
-		$fingerprint = params["json_string"]
+		$fingerprint = params["json_string"].to_i
 		logger.error "Fingerprint not coming in correctly" if ! $fingerprint
 
 		@client_ip = request.remote_ip
@@ -33,7 +33,7 @@ class HomePageController < ApplicationController
 	end
 
 	def comp_info
-		@comp_info = params["json_string"]
+		@comp_info = params["json_string"].to_i
 
 		user = FingerPrint.find_by_finger_print($fingerprint)
 		user.comp_info = @comp_info
