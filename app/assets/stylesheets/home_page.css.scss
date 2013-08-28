@@ -10,7 +10,7 @@ html {
 
 body{
 	background:black;
-	font-family:Comic Sans MS;
+	font-family:"Comic Sans MS";
 	font-weight:bold;
 	font-size:large;
 }
@@ -102,16 +102,6 @@ top:55%;
 	left:70%;
 }
 
-$ORBIT_DURATION: 70s;
-
-#corona1_div{ -webkit-animation:orbit1 $ORBIT_DURATION linear infinite; }
-#corona2_div{ -webkit-animation:orbit2 $ORBIT_DURATION linear infinite; }
-#corona3_div{ -webkit-animation:orbit3 $ORBIT_DURATION linear infinite; }
-#corona4_div{ -webkit-animation:orbit4 $ORBIT_DURATION linear infinite; }
-#corona5_div{ -webkit-animation:orbit5 $ORBIT_DURATION linear infinite; }
-#corona6_div{ -webkit-animation:orbit6 $ORBIT_DURATION linear infinite; }
-
-
 /*************************/
 $KEY_COLOR:#6600CC;
 #key-main_wrapper{
@@ -130,17 +120,8 @@ $KEY_COLOR:#6600CC;
 	top:0%;
 
 	img {
-		// height:10em; 
 		vertical-align:middle
 	}
-
-	// p {
-	// 	display:inline;
-	// 	border-radius:100%;
-	// 	padding:1px;
-	// 	margin:1px;
-	// 	width:100px;
-	// }
 }
 #key_line_music p { background:yellow; }
 #key_line_blue_business p { background:blue; }
@@ -153,6 +134,16 @@ $KEY_COLOR:#6600CC;
 
 
 /******************** KEYFRAME ANIMATIONS *************************/
+
+$ORBIT_DURATION: 70s;
+
+#corona1_div{ -webkit-animation:orbit1 $ORBIT_DURATION linear infinite; }
+#corona2_div{ -webkit-animation:orbit2 $ORBIT_DURATION linear infinite; }
+#corona3_div{ -webkit-animation:orbit3 $ORBIT_DURATION linear infinite; }
+#corona4_div{ -webkit-animation:orbit4 $ORBIT_DURATION linear infinite; }
+#corona5_div{ -webkit-animation:orbit5 $ORBIT_DURATION linear infinite; }
+#corona6_div{ -webkit-animation:orbit6 $ORBIT_DURATION linear infinite; }
+
 $CORONA_DISTANCE: 230px;
 
 @-webkit-keyframes orbit1 {

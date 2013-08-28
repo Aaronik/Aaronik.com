@@ -8,15 +8,14 @@ class HomePageController < ApplicationController
 	def finger_print
 
 		# I have models IP and FingerPrint
-		# Ip(id: integer, ip: string, visit_count: integer, finger_print_id: integer, notes: text, created_at: datetime, updated_at: datetime)
+		# Ip(id: integer, ip: string, visit_count: integer, finger_print_id: integer, notes: text, created_at: datetime, updated_at: datetime, location: text)
 		# FingerPrint(id: integer, finger_print: integer, notes: text, created_at: datetime, updated_at: datetime)
 
 		@fingerprint = params["json_string"]
 		@client_ip = request.remote_ip
+		@client_location = request.location # Thank you, geocoder
 
-		if ! @fingerprint
-			logger.error "Fingerprint not coming in correctly"
-		end
+			logger.error "Fingerprint not coming in correctly" if ! @fingerprint
 		
 		user = FingerPrint.where(finger_print: @fingerprint)
 		if user.length == 1
@@ -28,11 +27,10 @@ class HomePageController < ApplicationController
 			if ip_list.length == 1
 				ip = ip_list.first
 				ip.visit_count += 1
+				ip.location = @client_location
 				ip.save
 			elsif ip_list.length == 0
-				user.ips.create(ip: @client_ip, visit_count: 1)
-			elsif ip_list.length > 1
-				logger.error "parsed through Fingerprints and found multiple equivalent ips"
+				user.ips.create(ip: @client_ip, visit_count: 1, location: @client_location)
 			end
 
 		elsif user.length > 1
@@ -41,7 +39,7 @@ class HomePageController < ApplicationController
 		elsif user.length == 0
 			# Create new user with this fingerprint, create new ip with this ip.
 			new_user = FingerPrint.create(finger_print: @fingerprint)
-			new_user.ips.create(ip: @client_ip, visit_count: 1)
+			new_user.ips.create(ip: @client_ip, visit_count: 1, location: @client_location)
 		end
 	end
 end

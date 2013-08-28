@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827153059) do
+ActiveRecord::Schema.define(version: 20130828012114) do
 
   create_table "finger_prints", force: true do |t|
     t.integer  "finger_print", limit: 8
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20130827153059) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "location"
   end
 
 end
