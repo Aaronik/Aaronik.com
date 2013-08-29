@@ -18,6 +18,7 @@ body{
 //$STAGER_COLOR:#0000CD;
 $STAGER_COLOR:#A14F00;
 .stagers{
+	display:none;
 	font-family: 'Ariel Bold', cursive;
 	font-size:18px;
 	background:$STAGER_COLOR;
@@ -89,9 +90,10 @@ $STAGER_COLOR:#A14F00;
 }
 #sun{
 	z-index:2; /* for layer ordering | the higher the index, the closer the layer to your face. */ 
-	margin-top:-210px; /* Lest the image's top left corner be centered */
-	margin-left:-180px;
+	margin-top:-205px; //Lest the image's top left corner be centered
+	margin-left:-185px;
 	transition:all 0.8s;
+	cursor:pointer;
 
 	&:hover {
 		-webkit-transform:scale(1.02,1.02);
@@ -105,6 +107,7 @@ $STAGER_COLOR:#A14F00;
 }
 .coronas{
 	-webkit-transition:all 1s;
+	cursor:pointer;
 
 	&:hover {
 		-webkit-transform:scale(1.1,1.1);
@@ -116,7 +119,7 @@ $STAGER_COLOR:#A14F00;
 	opacity:0.4;
 }
 .hidden2{
-	opacity:0.09;
+	opacity:0.0;
 }
 .centered{				/* All b/c the sun won't move aside damnit thinks it's the center of the solar system. */
 position:absolute;
@@ -144,10 +147,13 @@ $KEY_COLOR:black;
 	padding:15px;
 	box-shadow:$KEY_COLOR 0px 0px 5px 5px;
 	transition: all 1s;
+
+	// opacity: 0;
 }
 .key_line{
 	//padding:5px;
 	padding:20px;
+	transition: opacity 0.5s;
 
 	img {
 		vertical-align:middle
@@ -174,7 +180,7 @@ $ORBIT_DURATION: 70s;
 #corona5_div{ -webkit-animation:orbit5 $ORBIT_DURATION linear infinite; }
 #corona6_div{ -webkit-animation:orbit6 $ORBIT_DURATION linear infinite; }
 
-$CORONA_DISTANCE: 230px;
+$CORONA_DISTANCE: 135%;
 
 @-webkit-keyframes orbit1 {
 	from { -webkit-transform: rotate(0deg) translateX($CORONA_DISTANCE); }

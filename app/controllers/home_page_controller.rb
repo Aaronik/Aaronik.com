@@ -33,7 +33,7 @@ class HomePageController < ApplicationController
 	end
 
 	def comp_info
-		@comp_info = params["json_string"].to_i
+		@comp_info = params["json_string"].to_s
 
 		user = FingerPrint.find_by_finger_print($fingerprint)
 		user.comp_info = @comp_info

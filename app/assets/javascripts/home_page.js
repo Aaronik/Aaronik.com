@@ -4,9 +4,14 @@
 //Aaronik (Aaron Sullivan) 2013
 
 $(document).ready(function(){
-	
-	// Initial hiding of all initially hidden bits
-	$(".stagers").hide();
+
+	$(".coronas").hover(function(event){
+		$("#key_line_"+event.target.name).removeClass("hidden2");
+	},
+	function(){
+		$(".key_line").addClass("hidden2");
+	}
+	);
 	
 	// Click on the coronas
 	$(".coronas").click(function(event){
@@ -18,7 +23,7 @@ $(document).ready(function(){
 		
 		$(".coronas").removeClass("hidden");  // Other coronas undim, clicked corona dims
 		$(event.target).addClass("hidden");
-		$("#key-main_wrapper").addClass("hidden2");
+		//$("#key-main_wrapper").addClass("hidden2");
 		
 		$(".stagers").hide("slow");  // hide whatever current stagers exist
 		$("#"+event.target.name).show("fast");  // name of corona corresponds with id of stager, stager shows
@@ -27,7 +32,7 @@ $(document).ready(function(){
 	// Click on the sun and everything goes back to bright, all stagers hide
 	$("#sun").click(function(){
 		$(".coronas").removeClass("hidden");
-		$("#key-main_wrapper").removeClass("hidden2");
+		//$("#key-main_wrapper").removeClass("hidden2");
 		$(".stagers").hide("fast");
 		
 		$("#sun").removeClass("moved_aside");
