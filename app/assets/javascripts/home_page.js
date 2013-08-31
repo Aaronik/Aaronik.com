@@ -5,6 +5,28 @@
 
 $(document).ready(function(){
 
+	$(".program_button > div").click(function(event){		
+
+		// How fast will the iframe fade in / out go
+		var show_speed = 'slow'
+
+		// Iframe "when to show" logic, AJAX request, iframe srcdoc population
+		if ($("#"+event.target.id+"_iframe_wrapper").is(":visible") == true) {
+			$("#"+event.target.id+"_iframe_wrapper").hide('drop','show_speed');
+		}else {
+			$(".program_iframe_wrapper").hide('drop','show_speed');
+			$("#"+event.target.id+"_iframe_wrapper").show('drop','show_speed');
+			$('#'+event.target.id+'_iframe').attr('srcdoc','Loading...');
+			$.ajax({
+				type: 'POST',
+				url: "/get_from_github",
+				data: {json_string: JSON.stringify(event.target.id)},
+				complete: function(data){$('#'+event.target.id+'_iframe').attr('srcdoc','<pre>'+data.responseText+'</pre>');}
+			});
+		}
+	});
+
+	// When you mouse over a corona, make the corresponding key line appear
 	$(".coronas").hover(function(event){
 		$("#key_line_"+event.target.name).removeClass("hidden2");
 	},
@@ -18,12 +40,8 @@ $(document).ready(function(){
 		$("#sun").addClass("moved_aside");
 		$(".corona_divs").addClass("moved_aside");
 		
-		//$("#sun").css("left","80%");
-		//$(".corona_divs").css("left","80%");
-		
 		$(".coronas").removeClass("hidden");  // Other coronas undim, clicked corona dims
 		$(event.target).addClass("hidden");
-		//$("#key-main_wrapper").addClass("hidden2");
 		
 		$(".stagers").hide("slow");  // hide whatever current stagers exist
 		$("#"+event.target.name).show("fast");  // name of corona corresponds with id of stager, stager shows
@@ -32,7 +50,6 @@ $(document).ready(function(){
 	// Click on the sun and everything goes back to bright, all stagers hide
 	$("#sun").click(function(){
 		$(".coronas").removeClass("hidden");
-		//$("#key-main_wrapper").removeClass("hidden2");
 		$(".stagers").hide("fast");
 		
 		$("#sun").removeClass("moved_aside");

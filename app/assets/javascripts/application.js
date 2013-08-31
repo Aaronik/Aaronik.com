@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require fingerprint
+//= require jquery.ui.effect-drop
 //= require_tree .

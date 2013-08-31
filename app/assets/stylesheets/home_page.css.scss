@@ -7,87 +7,12 @@
 html {
 	overflow:hidden; // No scroll bar
 }
-
 body{
 	background:black;
-	
 }
 
-/*************************/
-//$STAGER_COLOR:#DD7700;
-//$STAGER_COLOR:#0000CD;
-$STAGER_COLOR:#A14F00;
-.stagers{
-	display:none;
-	font-family: 'Ariel Bold', cursive;
-	font-size:18px;
-	background:$STAGER_COLOR;
-	text-align:center;
-	width:45%;
-	border-radius:10px;
-	padding:10px;
-	box-shadow:$STAGER_COLOR 0px 0px 5px 5px;
 
-	a {
-		text-decoration: none;
-	}
-
-	h2 {
-		font-family: 'Londrina Sketch', cursive;
-		font-size:40px;
-		//background:#00688B;
-		//background:#B0E0E6;
-		background:#D7B300;
-		border-radius:10px;
-		border:1px solid black;
-		box-shadow:black 3px 3px 3px 3px;
-	}
-
-	p {
-		border-radius:10px;
-		box-shadow:black 1px 1px 1px 1px;
-		//background:#48D1CC;
-		background:#51B336;
-	}
-
-	audio {
-		vertical-align: middle;
-	}
-}
-#philosophy{
-	p{
-		border:1px solid black;
-		padding:10px;
-	}
-}
-.new_table{ //direct child of .stagers, BIG ONE
-	display:-webkit-box;
-	padding:1px 2px 1px 2px;
-	$BUTTON_COLOR:darkblue;
-	$BUTTON_HOVER_COLOR:darkred;
-
-	div{
-		-webkit-box-flex:1;
-		text-align:center;
-		background:$BUTTON_COLOR;
-		border-radius:10px;
-		box-shadow: black 1px 1px 1px 1px;
-		color:white;
-		padding:8px;
-		margin:2px;
-		opacity:0.8;
-		-webkit-transition: opacity 0.3s, background 0.5s;
-
-		&:hover{
-			background:$BUTTON_HOVER_COLOR;
-		}
-	}
-
-	a{
-		display:-webkit-box;
-		-webkit-box-flex:1;
-	}
-}
+/******************************************************************/
 #sun{
 	z-index:2; /* for layer ordering | the higher the index, the closer the layer to your face. */ 
 	margin-top:-205px; //Lest the image's top left corner be centered
@@ -113,6 +38,84 @@ $STAGER_COLOR:#A14F00;
 		-webkit-transform:scale(1.1,1.1);
 	}
 }
+/*******************************************************************/
+$STAGER_COLOR:#A14F00;
+.stagers{
+	display:none;
+	font-family: 'Ariel Bold';
+	font-size:18px;
+	background:$STAGER_COLOR;
+	border-radius:10px;
+	padding:10px;
+	box-shadow:$STAGER_COLOR 0px 0px 5px 5px;
+	text-align:center;
+	width:42%;
+
+	a {
+		text-decoration: none;
+	}
+
+	h2 {
+		font-family: 'Londrina Sketch';
+		font-size:40px;
+		background:#D7B300;
+		border-radius:10px;
+		border:1px solid black;
+		box-shadow:black 3px 3px 3px 3px;
+	}
+
+	h3 {
+		background:#591B23;
+		border-radius:10px;
+		border:1px solid black;
+		box-shadow:black 2px 2px 2px 2px;
+	}
+
+	p {
+		border-radius:10px;
+		box-shadow:black 1px 1px 1px 1px;
+		background:#51B336;
+	}
+
+	audio {
+		vertical-align: middle;
+	}
+}
+#philosophy{
+	p{
+		border:1px solid black;
+		padding:10px;
+	}
+}
+$BUTTON_COLOR:darkblue;
+$BUTTON_HOVER_COLOR:darkred;
+
+.new_table{ //direct child of .stagers, BIG ONE
+	display:-webkit-box;
+	padding:1px 2px 1px 2px;
+
+	div{
+		-webkit-box-flex:1;
+		text-align:center;
+		background:$BUTTON_COLOR;
+		border-radius:10px;
+		box-shadow: black 1px 1px 1px 1px;
+		color:white;
+		padding:8px;
+		margin:2px;
+		opacity:0.8;
+		-webkit-transition: opacity 0.3s, background 0.5s;
+
+		&:hover{
+			background:$BUTTON_HOVER_COLOR;
+		}
+	}
+
+	a{
+		display:-webkit-box;
+		-webkit-box-flex:1;
+	}
+}
 
 /***** addable classes *******/
 .hidden{					/* The coronas will have this class added to them when they are clicked on */
@@ -132,9 +135,9 @@ top:55%;
 }
 
 /*************************/
-//$KEY_COLOR:#6600CC;
 $KEY_COLOR:black;
 #key-main_wrapper{
+	z-index:-1;
 	font-family:"Comic Sans MS";
 	font-weight:bold;
 	font-size:large;
@@ -147,27 +150,36 @@ $KEY_COLOR:black;
 	padding:15px;
 	box-shadow:$KEY_COLOR 0px 0px 5px 5px;
 	transition: all 1s;
-
-	// opacity: 0;
 }
 .key_line{
-	//padding:5px;
 	padding:20px;
 	transition: opacity 0.5s;
 
 	img {
-		vertical-align:middle
+		vertical-align:middle;
 	}
 }
-#key_line_music p { background:yellow; }
-#key_line_blue_business p { background:blue; }
-#key_line_grn_philosophy p { background:green; }
-#key_line_purp_program p { background:purple; }
-#key_line_red_web p { background:red; }
-#key_line_teal_me p { background:teal; }
 /*************************/
-
-
+.program_iframe_wrapper{
+	display:none;
+	background:lightgrey;
+	position:absolute;
+	z-index:3;
+	top:10%;
+	right:10%;
+	width:45%;
+	height:80%;
+	box-shadow:lightgrey 0px 0px 2px 2px;
+	border-radius:10px;
+}
+.program_iframes{
+	background:lightgrey;
+	width:95%;
+	height:88%;
+	position:absolute;
+	left:2%;
+	top:10%;
+}
 
 /******************** KEYFRAME ANIMATIONS *************************/
 
@@ -180,7 +192,8 @@ $ORBIT_DURATION: 70s;
 #corona5_div{ -webkit-animation:orbit5 $ORBIT_DURATION linear infinite; }
 #corona6_div{ -webkit-animation:orbit6 $ORBIT_DURATION linear infinite; }
 
-$CORONA_DISTANCE: 135%;
+// $CORONA_DISTANCE: 135%;
+$CORONA_DISTANCE: 240px;
 
 @-webkit-keyframes orbit1 {
 	from { -webkit-transform: rotate(0deg) translateX($CORONA_DISTANCE); }

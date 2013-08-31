@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aaronik - an online portfolio</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title>Aaronik - an online portfolio</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 
-  <link href='http://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<%= yield %>
+	<%= yield %>
 
-<%= render 'layouts/business' %>
-<%= render 'layouts/music' %>
-<%= render 'layouts/philosophy' %>
-<%= render 'layouts/program' %>
-<%= render 'layouts/web' %>
+	<%= render 'layouts/business' %>
+	<%= render 'layouts/music' %>
+	<%= render 'layouts/philosophy' %>
+	<%= render 'layouts/program' %>
+	<%= render 'layouts/web' %>
+	<%= render 'layouts/what' %>
+	<%= render 'layouts/iframe_programs' %>
 
 </body>
 </html>

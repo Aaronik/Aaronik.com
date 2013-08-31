@@ -39,4 +39,16 @@ class HomePageController < ApplicationController
 		user.comp_info = @comp_info
 		user.save
 	end
+
+	def get_from_github
+		require 'open-uri'
+
+		respond_to do |format|
+    	format.json do
+    		selected_program = params["json_string"].gsub('"','')
+    		@program = open("https://raw.github.com/Aaronik/netsec/master/#{selected_program}").read
+    		render :json => @program
+    	end
+    end
+	end
 end
