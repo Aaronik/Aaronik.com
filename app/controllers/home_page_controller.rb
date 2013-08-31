@@ -8,10 +8,7 @@ class HomePageController < ApplicationController
 	def finger_print
 
 		$fingerprint = params["json_string"].to_i
-		logger.error "Fingerprint not coming in correctly" if ! $fingerprint
-
 		@client_ip = request.remote_ip
-
 		geo_info = request.location # Thank you, geocoder
 		@client_location = "#{geo_info.city}, #{geo_info.state} #{geo_info.country_code}"
 		
