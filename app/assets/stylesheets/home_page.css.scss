@@ -76,9 +76,16 @@ $STAGER_COLOR:#A14F00;
 		box-shadow:black 1px 1px 1px 1px;
 		background:#51B336;
 	}
-
+}
+#music{
 	audio {
 		vertical-align: middle;
+		float: right;
+	}
+	p {
+		height:30px;
+		text-align:left;
+		padding: 5px;
 	}
 }
 #philosophy{
