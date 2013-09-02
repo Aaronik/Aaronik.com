@@ -5,10 +5,22 @@
 
 $(document).ready(function(){
 
-	$(".program_button > div").click(function(event){		
+	// How fast will the iframe fade in / out go
+	var show_speed = 'slow'
 
-		// How fast will the iframe fade in / out go
-		var show_speed = 'slow'
+	// Close buttons for programs
+	$(".close_button").click(function(){
+		$(".program_iframe_wrapper").hide('drop',show_speed);
+	});
+
+	// Github buttons for programs
+	$(".github_button").click(function(event){
+		var github_url = "https://github.com/Aaronik/netsec/blob/master/" + event.target.id;
+		window.location = github_url;
+	});
+
+	// Iframe loading for programs
+	$(".program_button > div").click(function(event){		
 
 		// Iframe "when to show" logic, AJAX request, iframe srcdoc population
 		if ($("#"+event.target.id+"_iframe_wrapper").is(":visible") == true) {

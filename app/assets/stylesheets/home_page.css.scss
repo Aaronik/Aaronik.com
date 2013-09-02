@@ -102,6 +102,7 @@ $BUTTON_HOVER_COLOR:darkred;
 	padding:1px 2px 1px 2px;
 
 	div{
+		cursor:pointer;
 		-webkit-box-flex:1;
 		text-align:center;
 		background:$BUTTON_COLOR;
@@ -186,6 +187,26 @@ $KEY_COLOR:black;
 	position:absolute;
 	left:2%;
 	top:10%;
+}
+.iframe_button_wrappers{
+
+	div {
+		background:darkgrey;
+		box-shadow: black 1px 1px 1px 1px;
+		cursor:pointer;
+		width:30%;
+		float:left;
+		text-align:center;
+		padding:8px;
+		margin:8px;
+		border-radius: 10px;
+		transition: all 0.5s;
+		color:white;
+
+		&:hover{
+			background:grey;
+		}
+	}
 }
 
 /******************** KEYFRAME ANIMATIONS *************************/
