@@ -50,6 +50,11 @@ class HomePageController < ApplicationController
 	end
 
 	def download_resume
-		send_file("public/Aaron Sullivan Resume.doc")
+		send_file(
+			"public/AaronSullivanResume.doc",
+			type: "application/msword",
+			filename: "AaronSullivanResume.doc",
+			stream: true
+			)
 	end
 end

@@ -14,10 +14,11 @@ $(document).ready(function(){
 	});
 
 	$("#resume_download_button").click(function(){
-		$.ajax({
-			type: 'GET',
-			url: '/resume'
-		});
+		// $.ajax({
+		// 	type: 'GET',
+		// 	url: '/resume'
+		// });
+		window.open("resume");
 	});
 
 	// Close buttons for programs
