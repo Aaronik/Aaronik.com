@@ -4,6 +4,8 @@ AaronikCom::Application.routes.draw do
   post '/finger_print', to: 'home_page#finger_print'
   post '/comp_info', to: 'home_page#comp_info'
   post '/get_from_github', to: 'home_page#get_from_github'
+  get '/resume', to: 'home_page#download_resume'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

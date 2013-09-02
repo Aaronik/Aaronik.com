@@ -2,7 +2,7 @@ class HomePageController < ApplicationController
 	respond_to :json, :html
 
 	def home
-		render 'home3.html'
+		render 'home3.html', stream: true
 	end
 
 	def finger_print
@@ -41,11 +41,15 @@ class HomePageController < ApplicationController
 		require 'open-uri'
 
 		respond_to do |format|
-    	format.json do
-    		selected_program = params["json_string"].gsub('"','')
-    		@program = open("https://raw.github.com/Aaronik/netsec/master/#{selected_program}").read
-    		render :json => @program
-    	end
-    end
+			format.json do
+				selected_program = params["json_string"].gsub('"','')
+				@program = open("https://raw.github.com/Aaronik/netsec/master/#{selected_program}").read
+				render :json => @program
+			end
+		end
+	end
+
+	def download_resume
+		send_file("public/Aaron Sullivan Resume.doc")
 	end
 end

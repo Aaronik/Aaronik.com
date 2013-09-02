@@ -8,6 +8,18 @@ $(document).ready(function(){
 	// How fast will the iframe fade in / out go
 	var show_speed = 'slow'
 
+	// Click Resume Icon, toggle resume iframe
+	$("#resume_image").click(function(){
+		$("#blank_iframe_wrapper").toggle('drop',show_speed);
+	});
+
+	$("#resume_download_button").click(function(){
+		$.ajax({
+			type: 'GET',
+			url: '/resume'
+		});
+	});
+
 	// Close buttons for programs
 	$(".close_button").click(function(){
 		$(".program_iframe_wrapper").hide('drop',show_speed);
