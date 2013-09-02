@@ -143,29 +143,43 @@ top:55%;
 }
 
 /*************************/
-$KEY_COLOR:black;
-#key-main_wrapper{
-	z-index:-1;
+.key_line{
+	color:white;
 	font-family:"Comic Sans MS";
 	font-weight:bold;
 	font-size:large;
-	background:$KEY_COLOR;
-	color:#BBBBBB;
-	border-radius:20%;
-	position:absolute;
-	top:10%;
-	right:10px;
-	padding:15px;
-	box-shadow:$KEY_COLOR 0px 0px 5px 5px;
-	transition: all 1s;
-}
-.key_line{
 	padding:20px;
 	transition: opacity 0.5s;
+	position: absolute;
+	z-index:-1;
 
 	img {
 		vertical-align:middle;
 	}
+}
+#key_line_music {
+	top:10%;
+	left:10%;
+}
+#key_line_business {
+	top:10%;
+	right:10%;
+}
+#key_line_philosophy{
+	top:40%;
+	left:4%;
+}
+#key_line_program{
+	top:40%;
+	right:4%;
+}
+#key_line_web{
+	bottom:10%;
+	left:8%;
+}
+#key_line_what{
+	bottom:10%;
+	right:10%;
 }
 /*************************/
 .program_iframe_wrapper{
