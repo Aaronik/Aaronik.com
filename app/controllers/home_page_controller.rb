@@ -1,4 +1,6 @@
 class HomePageController < ApplicationController
+	protect_from_forgery with: :null_session
+
 	respond_to :json, :html
 
 	def home
@@ -8,7 +10,7 @@ class HomePageController < ApplicationController
 	def finger_print
 
 		@fingerprint = params["json_string"].to_i
-		
+
 		client_ip = request.remote_ip
 
 		geo_info = request.location # Thank you, geocoder
