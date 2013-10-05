@@ -1,4 +1,6 @@
--key stays lit when clicked
+-key disappears when sun is moved_aside
 -put something spinning behind sun
--put some images of me under teal tab?
+-add mozilla functionality to site
 -once program is loaded, don't load it again.
+-Programs not loading correctly?
+-'open in github' should spawn new tab, not open in same tab
