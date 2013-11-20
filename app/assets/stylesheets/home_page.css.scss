@@ -234,12 +234,30 @@ top:55%;
 
 $ORBIT_DURATION: 70s;
 
-#corona1_div{ -webkit-animation:orbit1 $ORBIT_DURATION linear infinite; }
-#corona2_div{ -webkit-animation:orbit2 $ORBIT_DURATION linear infinite; }
-#corona3_div{ -webkit-animation:orbit3 $ORBIT_DURATION linear infinite; }
-#corona4_div{ -webkit-animation:orbit4 $ORBIT_DURATION linear infinite; }
-#corona5_div{ -webkit-animation:orbit5 $ORBIT_DURATION linear infinite; }
-#corona6_div{ -webkit-animation:orbit6 $ORBIT_DURATION linear infinite; }
+#corona1_div{ 
+	-webkit-animation: orbit1 $ORBIT_DURATION linear infinite; 
+	-moz-animation: orbi1 $ORBIT_DURATION linear infinite;
+}
+#corona2_div{ 
+	-webkit-animation: orbit2 $ORBIT_DURATION linear infinite; 
+	-moz-animation: orbi2 $ORBIT_DURATION linear infinite;
+}
+#corona3_div{ 
+	-webkit-animation: orbit3 $ORBIT_DURATION linear infinite; 
+	-moz-animation: orbi3 $ORBIT_DURATION linear infinite;
+}
+#corona4_div{ 
+	-webkit-animation: orbit4 $ORBIT_DURATION linear infinite; 
+	-moz-animation: orbi4 $ORBIT_DURATION linear infinite;
+}
+#corona5_div{ 
+	-webkit-animation: orbit5 $ORBIT_DURATION linear infinite; 
+	-moz-animation: orbi5 $ORBIT_DURATION linear infinite;
+}
+#corona6_div{ 
+	-webkit-animation: orbit6 $ORBIT_DURATION linear infinite; 
+	-moz-animation: orbi6 $ORBIT_DURATION linear infinite;
+}
 
 // $CORONA_DISTANCE: 135%;
 $CORONA_DISTANCE: 240px;
@@ -248,23 +266,52 @@ $CORONA_DISTANCE: 240px;
 	from { -webkit-transform: rotate(0deg) translateX($CORONA_DISTANCE); }
 	to   { -webkit-transform: rotate(360deg) translateX($CORONA_DISTANCE); }
 }
+@-moz-keyframes orbit1 {
+	from { -webkit-transform: rotate(0deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(360deg) translateX($CORONA_DISTANCE); }
+}
+
 @-webkit-keyframes orbit2 {
 	from { -webkit-transform: rotate(60deg) translateX($CORONA_DISTANCE); }
 	to   { -webkit-transform: rotate(420deg) translateX($CORONA_DISTANCE); }
 }
+@-moz-keyframes orbit2 {
+	from { -webkit-transform: rotate(60deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(420deg) translateX($CORONA_DISTANCE); }
+}
+
 @-webkit-keyframes orbit3 {
 	from { -webkit-transform: rotate(120deg) translateX($CORONA_DISTANCE); }
 	to   { -webkit-transform: rotate(480deg) translateX($CORONA_DISTANCE); }
 }
+@-moz-keyframes orbit3 {
+	from { -webkit-transform: rotate(120deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(480deg) translateX($CORONA_DISTANCE); }
+}
+
 @-webkit-keyframes orbit4 {
 	from { -webkit-transform: rotate(180deg) translateX($CORONA_DISTANCE); }
 	to   { -webkit-transform: rotate(540deg) translateX($CORONA_DISTANCE); }
 }
+@-moz-keyframes orbit4 {
+	from { -webkit-transform: rotate(180deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(540deg) translateX($CORONA_DISTANCE); }
+}
+
 @-webkit-keyframes orbit5 {
 	from { -webkit-transform: rotate(240deg) translateX($CORONA_DISTANCE); }
 	to   { -webkit-transform: rotate(600deg) translateX($CORONA_DISTANCE); }
 }
+@-moz-keyframes orbit5 {
+	from { -webkit-transform: rotate(240deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(600deg) translateX($CORONA_DISTANCE); }
+}
+
 @-webkit-keyframes orbit6 {
+	from { -webkit-transform: rotate(300deg) translateX($CORONA_DISTANCE); }
+	to   { -webkit-transform: rotate(660deg) translateX($CORONA_DISTANCE); }
+}
+@-moz-keyframes orbit6 {
 	from { -webkit-transform: rotate(300deg) translateX($CORONA_DISTANCE); }
 	to   { -webkit-transform: rotate(660deg) translateX($CORONA_DISTANCE); }
 }

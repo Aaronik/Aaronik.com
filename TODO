@@ -1,6 +1,11 @@
+turn this ip logging thing into a gem!!!
+
+-ditch fingerprinting and stick with raw ips and geo info
 -key disappears when sun is moved_aside
 -put something spinning behind sun
 -add mozilla functionality to site
 -once program is loaded, don't load it again.
--Programs not loading correctly?
 -'open in github' should spawn new tab, not open in same tab
+-nest diff keyframe animation in enclosing div for layered animations
+-put pictures in a CDN, will drastically increase speed.
+-Any way to loop the songs?
