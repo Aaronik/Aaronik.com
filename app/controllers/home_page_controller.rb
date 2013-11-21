@@ -54,9 +54,9 @@ class HomePageController < ApplicationController
 
 	def download_resume
 		send_file(
-			"public/AaronSullivanResume.pdf",
+			"public/aaron_sullivan_resume.pdf",
 			type: "application/pdf",
-			filename: "AaronSullivanResume.pdf",
+			filename: "aaron_sullivan_resume.pdf",
 			stream: true
 			)
 	end
