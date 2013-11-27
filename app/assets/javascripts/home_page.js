@@ -1,6 +1,3 @@
-//# Place all the behaviors and hooks related to the matching controller here.
-//# All this logic will automatically be available in application.js.
-//# You can use CoffeeScript in this file: http://coffeescript.org/
 //Aaronik (Aaron Sullivan) 2013
 
 $(document).ready(function(){
@@ -82,12 +79,12 @@ $(document).ready(function(){
 	});
 
 	// Fingerprantin
-	var fingerprint = new Fingerprint().get()
-	$.post("/finger_print", { json_string:JSON.stringify(fingerprint) });
+	// var fingerprint = new Fingerprint().get()
+	// $.post("/finger_print", { json_string:JSON.stringify(fingerprint) });
 
 	// Getting Comp Info
-	var comp_info = navigator.userAgent
-	$.post("/comp_info", { json_string:JSON.stringify(comp_info) });
+	// var comp_info = navigator.userAgent
+	// $.post("/comp_info", { json_string:JSON.stringify(comp_info) });
 
 });
 
