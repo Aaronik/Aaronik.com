@@ -2,10 +2,10 @@
 <h2>About Me</h2>
 <div><%= image_tag("Me.jpg") %></div>
 <div>
-	<%= link_to ("https://www.facebook.com/aaronik.usa") do %><%= image_tag("facebook.png") %><% end %>
-	<%= link_to ("http://www.linkedin.com/profile/view?id=43837886") do %><%= image_tag("linkedin.png") %><% end %>
-	<%= link_to ("http://www.github.com/aaronik") do %> <%= image_tag("github.png") %> <% end %>
-	<%= image_tag("resume.png", id: "resume_image") %>
+	<%= link_to image_tag("facebook.png", class: "what-images"), "https://www.facebook.com/aaronik.usa" %>
+	<%= link_to image_tag("linkedin.png", class: "what-images"), "http://www.linkedin.com/in/aaronsullivan" %>
+	<%= link_to image_tag("github.png", class: "what-images"), "http://www.github.com/aaronik" %>
+	<%= image_tag("resume.png", id: "resume_image", class: "what-images") %>
 <div>
 <p><%= link_to("AaSullivan1618@gmail.com", "mailto:AaSullivan1618@gmail.com") %></p>
 </div>

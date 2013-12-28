@@ -1,20 +1,17 @@
-// Place all the styles related to the home_page controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 /* Aaron Sullivan alias Aaronik alias Aaroneous 2013 */
 
 html {
 	overflow:hidden; // No scroll bar
 }
 body{
-	background:black;
+	background: black;
+	// background-image: url("dark_mosaic.png");
 }
 
 
 /******************************************************************/
 #sun{
-	z-index:2; /* for layer ordering | the higher the index, the closer the layer to your face. */ 
+	z-index:2;
 	margin-top:-205px; //Lest the image's top left corner be centered
 	margin-left:-185px;
 	transition:all 0.8s;
@@ -83,6 +80,9 @@ $STAGER_COLOR:#A14F00;
 }
 #resume_image{
 	cursor:pointer;
+}
+.what-images {
+	padding: 10px !important;
 }
 #music{
 	audio {

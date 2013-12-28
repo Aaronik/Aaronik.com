@@ -1,4 +1,3 @@
-
 <!-- Iframe wrapper for anything else it's needed for -->
 <!-- resume iframe -->
 <div id="blank_iframe_wrapper" class="program_iframe_wrapper">
@@ -9,48 +8,9 @@
 	</div>
 </div>
 
-
-<div id="ap_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="ap">View in Github</div></div>
-	<iframe id="ap_iframe" class="program_iframes" srcdoc="Loading...">your browser no iframe</iframe>
-</div>
-
-<div id="sm_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="ap">View in Github</div></div>
-	<iframe id="sm_iframe" class="program_iframes" srcdoc="Loading...">your browser no iframe</iframe>
-</div>
-
-<div id="darp_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="ap">View in Github</div></div>
-	<iframe id="darp_iframe" class="program_iframes" srcdoc="Loading...">your browser no iframe</iframe>
-</div>
-
-<div id="dict_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="dict">View in Github</div></div>
-	<iframe id="dict_iframe" class="program_iframes" srcdoc="Loading...">your browser no iframe</iframe>
-</div>
-
-<div id="ips_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="ips">View in Github</div></div>
-	<iframe id="ips_iframe" class="program_iframes" srcdoc="Loading...">your browser no iframe</iframe>
-</div>
-
-<div id="kn_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="kn">View in Github</div></div>
-	<iframe id="kn_iframe" class="program_iframes" srcdoc="Loading...">your browser no iframe</iframe>
-</div>
-
-<div id="trix_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="trix">View in Github</div></div>
-	<iframe id="trix_iframe" class="program_iframes" srcdoc="Loading...">your browser no iframe</iframe>
-</div>
-
-<div id="webscan_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="webscan">View in Github</div></div>
-	<iframe id="webscan_iframe" class="program_iframes" srcdoc="Loading...">your browser no ifram</iframe>
-</div>
-
-<div id="webscano_iframe_wrapper" class="program_iframe_wrapper">
-	<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="webscano">View in Github</div></div>
-	<iframe id="webscano_iframe" class="program_iframes" srcdoc="Loading...">your browserno ifra</iframe>
-</div>
+<% programs.each do |prog| %>
+	<div id="<%= prog %>_iframe_wrapper" class="program_iframe_wrapper">
+		<div class="iframe_button_wrappers"><div class="close_button">Close</div><div class="github_button" id="<%= prog %>">View in Github</div></div>
+		<iframe id="<%= prog %>_iframe" class="program_iframes" srcdoc="Loading...">your browser no iframe</iframe>
+	</div>
+<% end %>
